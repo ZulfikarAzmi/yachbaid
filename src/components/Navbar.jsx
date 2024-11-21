@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-scroll";
 
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: "#1A5319" }}>
       <div className="container">
-        <a className="navbar-brand" href="/">
+        <a className="navbar-brand" href="/" style={{ cursor: "pointer" }}>
           Yayasan Achmad Baidlowi
         </a>
         <button
@@ -21,16 +22,48 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link active" href="/">Home</a>
+              <Link
+                className="nav-link active"
+                to="home"
+                smooth={true}
+                duration={500}
+                style={{ cursor: "pointer" }}
+              >
+                Home
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/about">Tentang Kami</a>
+              <Link
+                className="nav-link"
+                to="about"
+                smooth={true}
+                duration={500}
+                style={{ cursor: "pointer" }}
+              >
+                Tentang Kami
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/programs">Program</a>
+              <Link
+                className="nav-link"
+                to="program"
+                smooth={true}
+                duration={500}
+                style={{ cursor: "pointer" }}
+              >
+                Program
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/donation">Donasi</a>
+              <Link
+                className="nav-link"
+                to="donasi"
+                smooth={true}
+                duration={500}
+                style={{ cursor: "pointer" }}
+              >
+                Donasi
+              </Link>
             </li>
           </ul>
         </div>
